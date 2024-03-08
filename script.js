@@ -49,3 +49,10 @@ function closeModal() {
     var modal = document.getElementById('myModal');
     modal.style.display = 'none';
 }
+
+function toggleDarkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+
+

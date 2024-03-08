@@ -26,6 +26,28 @@
 			text-align: center;
         }
 
+/* Style for the dark mode toggle button */
+#dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333; /* Initial color */
+    z-index: 9999;
+}
+
+#dark-mode-toggle:focus {
+    outline: none;
+}
+
+/* Style for dark mode */
+.dark-mode {
+    background-color: #333; /* Change background color */
+    color: #fff; /* Change text color */
+}
+
         div{
             font-weight: bold;
 			font-size: 20px;
