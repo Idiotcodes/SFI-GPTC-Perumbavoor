@@ -1,248 +1,231 @@
-       body {
-			font-family: "Teko", sans-serif;	
-            background-image: url(./assets/clg.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-			height: 100vh;
-        }
-
-        body::-webkit-scrollbar {width: 0em;}
-
-
-        header {
-            color: #fff;
-            text-align: left;
-            padding: 1px 30px;
-		}
-        header h1 {
-            font-size: 52px;
-            margin: 0 0.5em 0 0em;
-			text-align: center;
-        }
-
-/* Style for the dark mode toggle button */
-#dark-mode-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #333; /* Initial color */
-    z-index: 9999;
+body {
+  font-family: 'Teko', sans-serif;
+  background-image: url('./assets/clg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
 }
 
-#dark-mode-toggle:focus {
-    outline: none;
+body::-webkit-scrollbar {
+  width: 0em;
 }
 
-/* Style for dark mode */
-.dark-mode {
-    background-color: #333; /* Change background color */
-    color: #fff; /* Change text color */
+header {
+  background-color: rgba(197, 0, 0, 0.7);
+  text-align: center;
+  padding: 0.5em 0;
 }
 
-        div{
-            font-weight: bold;
-			font-size: 20px;
-        }
-        .content{
-            flex: 1;
-            overflow-y: none;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px 20px 20px 20px;
-            padding: 16px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .dropdown-button {
-            cursor: pointer;
-            padding: 14px 20px;
-            background-color: rgba(255, 251, 251, 0.612);
-            border-radius: 5px;
-            margin: 5px 0px;
-            transition: background-color 0.5s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .dropdown-button:hover {
-            background-color: #333;
-            color: #fff;
-        }
-        .dropdown-list {
-            display: none;
-            list-style: none;
-            padding: 0;
-            margin-left: 20px;
-        }
-        .material-symbols-outlined{font-size: 22px;}
-/* more button*/
-        .more-btn {
-            cursor: pointer;
-            padding: 10px 18px;
-            border-radius: 5px;
-            float: right;
-        }
-        .more-btn:hover{background-color: #ffffff67;}
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
 
-        .box {
-            display: none;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            background-color: #ffffff;
-            padding: 50px 5px 10px 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        .box-link {
-            display: block;
-            padding: 10px ;
-            background-color: #b00000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: center;
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #333;
+}
 
-        }
+/* Buttons */
+.department-button,
+.department-choice,
+.semester-choice,
+.subject-choice,
+.back-button,
+.resource-type-button {
+  /* Added styling for resource type buttons */
+  background-color: #b00000;
+  color: #fff;
+  border: none;
+  padding: 1em 1.5em;
+  margin: 10px;
+  border-radius: 5px;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-        .box-link:hover {background-color: #973030;}
-        
- .dropdown-list2 {
-            width: 500px;
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			display: none;
-            list-style: none;
-            padding: 0;
-			position: fixed;
-			right: 8%;
-			top: 15%;
-            transition: background-color 0.5s ease;
-        }
-        .dropdown-list2 li {
-            margin: 20px;
-        }
-        .dropdown-list2 a {
-            text-decoration: none;
-            color: #333;
-            display: inline-block;
-            padding: 10px 10px;
-            background-color: #eee;
-            border-radius: 5px;
-            transition: background-color 0.5s ease;
-        }
-        .dropdown-list2 a:hover {
-            background-color: #333;
-            color: #fff;
-        }
+.department-button:hover,
+.department-choice:hover,
+.semester-choice:hover,
+.subject-choice:hover,
+.back-button:hover,
+.resource-type-button:hover {
+  /* Added hover for resource type buttons */
+  background-color: #973030;
+}
 
-		.close-button {
-    		position: absolute;
-    		top: 5px;
-    		right: 5px;
-    		background: none;
-			border: none;
-    		font-size: 20px;
-    		cursor: pointer;
-		}
-		.close-button:hover{color: #fff;}		
-      	.fa{
-            background-color: #eee;
-            border-radius: 44px;
-    		color: #1b1b1b;
-     		font-size: 28px;
-     		width: 36px;
-            margin: 2px 12px;
-     		text-decoration: none;
-            padding: 5px 2px;
-			border: 1px solid #c5000080;
-            transition: background-color 0.5s ease;
- 		}
-        .fa:hover{color:#eee; background-color: #1b1b1b;}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-        .sidebox{
-            position: fixed;
-            top: 30%;
-            right: 2em;
-            background-color: #ffffff;
-            color: #b50000;
-            padding: 5px 30px;
-            border-radius: 10px 10px 0 0;
-            transform: rotate(-90deg);
-            transform-origin: right top;
-            text-decoration: none;
-            font-weight: 800;
-            transition: background-color 0.3s ease;
-        }
-        .sidebox:hover{color: #fff; background-color: #b50000;}
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  color: #333;
+}
 
-        .footer {
-            background-color: rgba(255, 255, 255, 0.7);
-            color: #b30000;
-            text-align: center;
-            width: 100%;
-            padding: 8px 0px 0px 0px;
-			margin-bottom: 30px;
-        }
-        
-        .footer h5 {
-            margin: 3px 0;
-		}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-		.footer a {
-			color:  #b30000;
-			transition: 0.3s;
-		}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
+.modal-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-      /* Responsive design for mobile */
-    	@media (max-width: 768px) {
-          body{height: 94vh;}
-        	
-			.dropdown-list2{
-                width: -webkit-fill-available;
-				margin: 0px 30px;
-				background-color: rgba(126, 126, 126, 0.8);
-                right: 0%;
-			}
-            header {
-                text-align: left;
-                padding: 1px;
-			    /*background-color: rgba(197, 0, 0, 0.5);*/
-		    }
-            header h1,h2{
-                display: block;
-            }
-            header h1 {
-                font-size: 42px;
-                margin: 0px 0px 0px 0.45em;
-            }
-            header h2{
-                font-size: 26px;
-        	    margin: 0px 0px 4px .8em;
-            }
-            .more-btn{
-              	position: absolute;
-              	top:0;
-              	right:0;
-            }
-            .modal-content img {
-            width: 100%;            
-            }
-          	.close{
-          	margin: -50px -30px;
-          	}
-    	}
+/* Department Grid */
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+/* Resource List */
+#resource-list {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#resource-list a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #eee;
+  color: #b00000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#resource-list a:hover {
+  background-color: #ddd;
+}
+
+.resource-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow buttons to wrap on smaller screens */
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(197, 0, 0, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 0.5em 0;
+  margin-top: auto;
+}
+
+.footer h5 {
+  margin: 0.3em 0;
+}
+
+.footer a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #ccc;
+}
+
+.social-buttons {
+  margin-bottom: 1em;
+}
+
+.fa {
+  background-color: #b00000;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5em;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.fa:hover {
+  background-color: #b00000;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .container {
+    margin: 10px;
+    padding: 1.5em;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  .department-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .resource-button-group {
+    flex-direction: column;
+  }
+
+  .resource-type-button {
+    margin: 5px 0;
+  }
+}
