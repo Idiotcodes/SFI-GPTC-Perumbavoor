@@ -98,15 +98,7 @@ function displayResourcesByType(resources, resourceType) {
     const resourceList = document.getElementById('resource-list');
     resourceList.innerHTML = '';
 
-    if (resourceType === 'textbook') {
-        if (resources.textbook && resources.textbook.length > 0) {
-            resources.textbook.forEach(textbook => {
-                addResourceLink(resourceList, textbook.name, textbook.link);
-            });
-        } else {
-            resourceList.innerHTML = '<p>No textbook available.</p>';
-        }
-    } else if (resourceType === 'modules') {
+    if (resourceType === 'modules') {
         let hasModules = false; // Flag to check if any modules exist
         for (let i = 1; i <= 4; i++) {
             const moduleKey = `module${i}`;
@@ -130,13 +122,13 @@ function displayResourcesByType(resources, resourceType) {
         if (!hasStudyNotes) {
             resourceList.innerHTML = '<p>No study notes available.</p>';
         }
-    } else if (resourceType === 'labmanual') {
+    } else if (resourceType === 'qpaper') {
         if (resources.labmanual && resources.labmanual.length > 0) {
             resources.labmanual.forEach(manual => {
                 addResourceLink(resourceList, manual.name, manual.link);
             });
         } else {
-            resourceList.innerHTML = '<p>No lab manual available.</p>';
+            resourceList.innerHTML = '<p>No question paper available.</p>';
         }
     }
 }
@@ -192,16 +184,15 @@ function getSubjects(department, semester) {
 function getResources(subject) {
     const resources = {
         'Communication Skills in English': {
-            textbook: [{ name: 'Communication Skills in English Textbook', link: '#' }],
             module1: { name: 'Module 1', link: '#' },
             module2: { name: 'Module 2', link: '#' },
             module3: { name: 'Module 3', link: '#' },
             module4: { name: 'Module 4', link: '#' },
-            studynote1: { name: 'Study Note 1', link: '#' },
-            studynote2: { name: 'Study Note 2', link: '#' },
-            studynote3: { name: 'Study Note 3', link: '#' },
-            studynote4: { name: 'Study Note 4', link: '#' },
-            labmanual: [{ name: 'Lab Manual', link: '#' }]
+            studynote1: { name: 'Study Note 1', link: './materials/general/Sem%201/English%20/Module%201/Notes%20The%20Gift%20of%20Magi.pdf' },
+            studynote2: { name: 'Study Note 2', link: './materials/general/Sem%201/English%20/Module%202/Stopping%20by%20the%20woods%20on%20a%20snowy%20evening%20.pdf' },
+            studynote3: { name: 'Study Note 3', link: './materials/general/Sem%201/English%20/Module%203/AN%20ASTROLOGER%E2%80%99S%20DAY%20(4).pdf' },
+            studynote4: { name: 'Study Note 4', link: './/materials/general/Sem%201/English%20/Module%204/full.pdf' },
+            labmanual: [{ name: 'Lab Manual', link: './materials/general/Sem%201/English%20/Model%20question%20paper%20/model%20question%20paper.pdf' }]
         },
         'Mathematics I': {
             textbook: [{ name: 'Mathematics I Textbook', link: '#' }],
