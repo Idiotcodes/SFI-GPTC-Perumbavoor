@@ -123,8 +123,8 @@ function displayResourcesByType(resources, resourceType) {
             resourceList.innerHTML = '<p>No study notes available.</p>';
         }
     } else if (resourceType === 'qpaper') {
-        if (resources.labmanual && resources.labmanual.length > 0) {
-            resources.labmanual.forEach(manual => {
+        if (resources.qpaper && resources.qpaper.length > 0) {
+            resources.qpaper.forEach(manual => {
                 addResourceLink(resourceList, manual.name, manual.link);
             });
         } else {
@@ -192,19 +192,18 @@ function getResources(subject) {
             studynote2: { name: 'Study Note 2', link: './materials/general/Sem%201/English%20/Module%202/Stopping%20by%20the%20woods%20on%20a%20snowy%20evening%20.pdf' },
             studynote3: { name: 'Study Note 3', link: './materials/general/Sem%201/English%20/Module%203/AN%20ASTROLOGER%E2%80%99S%20DAY%20(4).pdf' },
             studynote4: { name: 'Study Note 4', link: './/materials/general/Sem%201/English%20/Module%204/full.pdf' },
-            labmanual: [{ name: 'Lab Manual', link: './materials/general/Sem%201/English%20/Model%20question%20paper%20/model%20question%20paper.pdf' }]
+            qpaper: [{ name: 'Question Paper', link: './materials/general/Sem%201/English%20/Model%20question%20paper%20/model%20question%20paper.pdf' }]
         },
         'Mathematics I': {
-            textbook: [{ name: 'Mathematics I Textbook', link: '#' }],
             module1: { name: 'Module 1', link: '#' },
             module2: { name: 'Module 2', link: '#' },
             module3: { name: 'Module 3', link: '#' },
             module4: { name: 'Module 4', link: '#' },
-            studynote1: { name: 'Study Note 1', link: '#' },
-            studynote2: { name: 'Study Note 2', link: '#' },
-            studynote3: { name: 'Study Note 3', link: '#' },
-            studynote4: { name: 'Study Note 4', link: '#' },
-            labmanual: [{ name: 'Lab Manual', link: '#' }]
+            studynote1: { name: 'Study Note 1', link: './materials/general/Sem 1/Maths /Module 1 /mod-1.pdf' },
+            studynote2: { name: 'Study Note 2', link: './materials/general/Sem 1/Maths /Module 2 /mod-2.pdf' },
+            studynote3: { name: 'Study Note 3', link: './materials/general/Sem 1/Maths /Module 3 /mod-3.pdff' },
+            studynote4: { name: 'Study Note 4', link: './materials/general/Sem 1/Maths /Module 4 /mod-4.pdf' },
+            qpaper: [{ name: 'Question Paper', link: './materials/general/Sem 1/Maths /Model question paper /modelquestionpaper.pdf' }]
         },
         'Microcontroller and Applications': {
             textbook: [{ name: 'Microcontroller and Applications Textbook', link: '#' }],
@@ -231,16 +230,15 @@ function getResources(subject) {
             labmanual: [{ name: 'Lab Manual', link: '#' }]
         },
         'Applied Chemistry': {
-            textbook: [{ name: 'Applied Chemistry Textbook', link: '#' }],
             module1: { name: 'Module 1', link: '#' },
             module2: { name: 'Module 2', link: '#' },
             module3: { name: 'Module 3', link: '#' },
             module4: { name: 'Module 4', link: '#' },
-            studynote1: { name: 'Study Note 1', link: '#' },
-            studynote2: { name: 'Study Note 2', link: '#' },
-            studynote3: { name: 'Study Note 3', link: '#' },
-            studynote4: { name: 'Study Note 4', link: '#' },
-            labmanual: [{ name: 'Lab Manual', link: '#' }]
+            studynote1: { name: 'Study Note 1', link: './materials/general/Sem 1/Chemistry /Module 1 /mod-1.pdf' },
+            studynote2: { name: 'Study Note 2', link: './materials/general/Sem 1/Chemistry /Module 2 /mod-2.pdf' },
+            studynote3: { name: 'Study Note 3', link: './materials/general/Sem 1/Chemistry /Module 3 /mod-3.pdf' },
+            studynote4: { name: 'Study Note 4', link: './materials/general/Sem 1/Chemistry /Module 4 /mod-4.pdf' },
+            qpaper: [{ name: 'Question Paper', link: './materials/general/Sem 1/Chemistry /Model question paper /modelquestionpaper.pdf' }]
         },
         'Mathematics II': {
             textbook: [{ name: 'Mathematics II Textbook', link: '#' }],
