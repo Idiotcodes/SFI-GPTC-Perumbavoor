@@ -218,16 +218,15 @@ function getResources(subject) {
             labmanual: [{ name: 'Lab Manual', link: '#' }]
         },
         'Applied Physics I': {
-            textbook: [{ name: 'Applied Physics I Textbook', link: '#' }],
             module1: { name: 'Module 1', link: '#' },
             module2: { name: 'Module 2', link: '#' },
             module3: { name: 'Module 3', link: '#' },
             module4: { name: 'Module 4', link: '#' },
-            studynote1: { name: 'Study Note 1', link: '#' },
-            studynote2: { name: 'Study Note 2', link: '#' },
-            studynote3: { name: 'Study Note 3', link: '#' },
-            studynote4: { name: 'Study Note 4', link: '#' },
-            labmanual: [{ name: 'Lab Manual', link: '#' }]
+            studynote1: { name: 'Study Note 1', link: './materials/general/Sem 1/Physics /Module 1 /mod-1.pdf' },
+            studynote2: { name: 'Study Note 2', link: './materials/general/Sem 1/Physics /Module 2 /mod-2.pdf' },
+            studynote3: { name: 'Study Note 3', link: './materials/general/Sem 1/Physics /Module 3 /mod-3.pdf' },
+            studynote4: { name: 'Study Note 4', link: './materials/general/Sem 1/Physics /Module 4 /mod-4.pdf' },
+            qpaper: [{ name: 'Question Paper', link: './materials/general/Sem 1/Physics /Model question paper /modelquestionpaper.pdf' }]
         },
         'Applied Chemistry': {
             module1: { name: 'Module 1', link: '#' },
